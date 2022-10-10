@@ -24,8 +24,8 @@ let respuestas = [
 
 let geek = ['Miguel', 'Jesus', 'Juan Carlos', 'Alexander', 'Manuel', 'Samuel']
 
-//definicion de la funcion
-function ContarPosiciones(Lista){//parametros 
+//definicion de la funcion //callback
+function ContarPosiciones(functionStart){//parametros 
     //bloque de codigo
     let contador = 0
     while(Lista[contador] != undefined){//verdadera condicion critica
@@ -41,4 +41,13 @@ function ContarPosiciones(Lista){//parametros
 
 
 
-console.log( ContarPosiciones(respuestas) )
+
+//IIFE
+(function () {
+    console.log('Tradional Self invoke Functions 🟡')
+})();
+
+//Arrow function () => 2
+(() => {
+    console.log('Self Invoke Arrow Function🔵');
+})();
