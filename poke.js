@@ -10,19 +10,23 @@ const base = ['Arroz', 'Lechuga', 'Quinoa']
 
 const crunch = ['Mani', 'Almendras', 'Merey']
 
+let pokesWithQuiona = []
+
 vegetales.forEach(vegetal => {
     frutas.forEach(fruta => {
         proteina.forEach(prot =>{
             base.forEach(carbo => {
                 crunch.forEach(pop => {
-                    if(pop != 'Mani'){
-                        console.log(`
-                        🍟 poke: ${vegetal} ${fruta} ${prot} ${carbo} ${pop} 🥗
-                        `)
-                    }
+                    if(carbo == 'Quinoa')
+                        pokesWithQuiona.push(`${vegetal} ${fruta} ${prot} ${carbo}`)
+                    /*console.log(`                                           
+                    🍟 poke: ${vegetal} ${fruta} ${prot} ${carbo} ${pop == 'Mani' ? pop : '🍺'} 🥗
+                    `)*/
                 })
             })
         })
     })
 })
 
+
+console.log(pokesWithQuiona)
